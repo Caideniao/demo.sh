@@ -4,10 +4,15 @@ body {
 }
 ul li {
     list-style: none;
-    float: left; 
-     
+    float: left;  
     font-size: 12px;
     font-weight: bold;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 ul>li>a {
     text-decoration: none;
