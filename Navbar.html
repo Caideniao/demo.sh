@@ -6,24 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>topNavBar</title>
     <link rel="stylesheet" href="Navbar.css">
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
+    <script src="//at.alicdn.com/t/font_600523_7mi7dp4r4i4zehfr.js"></script>
 </head>
 <body>
     <div class="rscard">
-        <a href="#">
-            <span class="rs">RS</span>
-            <span class="card">card</span>
-        </a>   
-        <nav>
-            <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其他</a></li>
-            </ul>
-        </nav>
+        <div class="addpadding">
+            <a href="#">
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>   
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">技能</a></li>
+                    <li><a href="#">作品</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">日历</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">其他</a></li>
+                </ul>
+            </nav>
+        </div>
     </div> 
+    <div class="bgimg">
+        <div class="bgcolor"></div>
+    </div>
+    
+    <div class="avatar clearfix">
+        <img src="./resume/avatar.jpg" alt="人物头像">
+        <div class="info clearfix">
+            <div class="Hello">
+                <div class="hello">Hello</div>
+                <div class="triangle"></div>
+            </div>                
+            <div class="profile">
+                <div class="namepro">
+                    <h1>杜惠东</h1>
+                    <p>前端开发工程师</p>
+                </div>    
+                <hr>
+            </div>
+            <dl class="clearfix">
+                <dt>年龄</dt>
+                <dd>24</dd>
+                <dt>所在城市</dt>
+                <dd>深圳</dd>
+                <dt>邮箱</dt>
+                <dd>yzqtdu@Gmail.com</dd>
+                <dt>手机</dt>
+                <dd>17603062635</dd>
+            </dl>                      
+        </div>
+    </div>
+    <div class="iconbar">
+            <a href="#"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg></a>   
+            <a href="#"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-weibo"></use>
+            </svg></a>   
+            <a href="#"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-twitter"></use>
+            </svg></a>
+    </div>
 </body>
-</html>
+</html> 
