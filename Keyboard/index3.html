@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <main>
+   </main>
+    <script>
+            var row = [["Q","W","E","R","T","Y","U","I","O","P"],["A","S","D","F","G","H","J","K","L"],["Z","X","C","V","B","N","M"]]
+            
+            var hash = {"Q":"qq.com", E:"ele.me", M:"meituan.com"}
+            var span = document.createElement('span')
+            cash = JSON.parse(localStorage.getItem('zz')) || 'null'
+            if(cash) {
+                hash = cash
+            }  
+            var length = row.length    
+            for (var i = 0; i < length; i++) {
+                var div = document.createElement('div')
+                div.className = 'rows'+i 
+                var div1 = document.body.firstElementChild.appendChild(div)
+               
+                for (var n = 0; n < row[i].length; n++) {
+                    var text = document.createTextNode(row[i][n])
+                    var span = document.createElement('span')
+                    var key = document.createElement('kbd') 
+                    span.className = 'spans'
+                    var keyboard = div1.appendChild(span)
+                    var keys = keyboard.appendChild(key)
+                    var button = document.createElement('button')
+                    button.textContent = 'E'
+                    button.id = row[i][n]
+                    keys.appendChild(text)
+                    keyboard.appendChild(button)
+                    button.onclick = function (dd) {
+                    var button2 = dd['target']
+                    var key = button2['id']
+                    var x = prompt('请输入网址')
+                    hash[key] = x
+                    localStorage.setItem('zz',JSON.stringify(hash))}
+                    
+                    }
+                   
+            }   
+            document.onkeypress = function(x) {
+            var key = x["key"].toUpperCase()
+            if (hash[key]) {
+                var website = hash[key]
+                window.open('http://' + website, '_blank')
+            }else {
+                var x = prompt('请输入网址')
+                hash[key] = x
+                localStorage.setItem('zz',JSON.stringify(hash))}         
+        }
+            
+            
+            </script>
+
+</body>
+
+</html>
