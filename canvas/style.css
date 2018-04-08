@@ -8,6 +8,9 @@ body {
 body canvas {
     display: block;
     background-color: wheat;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .wrapper {
@@ -30,7 +33,7 @@ body canvas {
     fill: lightskyblue;
 }
 .icon:click {
-    
+
 }
 
 .icon.active {
