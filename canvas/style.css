@@ -1,0 +1,40 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+body {
+    background-color: white;
+}
+body canvas {
+    display: block;
+    background-color: wheat;
+}
+
+.wrapper {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.icon {
+    width: 30px; 
+    height: 30px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    margin: 0 10px;
+    
+}
+.icon:hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+    fill: lightskyblue;
+}
+.icon:click {
+    
+}
+
+.icon.active {
+    transform: scale(1.4);
+    transition: all 0.3s;
+    fill: lightskyblue;
+}
