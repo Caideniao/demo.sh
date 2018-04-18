@@ -14,11 +14,11 @@
            overflow: hidden;
         }
     </style>
-    <script src="//at.alicdn.com/t/font_600523_7mi7dp4r4i4zehfr.js"></script>
+    <!-- <script src="//at.alicdn.com/t/font_600523_7mi7dp4r4i4zehfr.js"></script> -->
 </head>
 <body>
-    <div class="rscard">
-        <div class="addpadding">
+    <div id=rscard class="rscard">
+        <div id=addpadding class="addpadding">
             <a href="#">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
@@ -27,7 +27,11 @@
                 <ul class="clearfix">
                     <li><a href="#">关于</a></li>
                     <li><a href="#">技能</a></li>
-                    <li><a href="#">作品</a></li>
+                    <li ><a id=worklist href="#">作品
+                        <ul class="worklist">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                        </ul></a></li>
                     <li><a href="#">博客</a></li>
                     <li><a href="#">日历</a></li>
                     <li><a href="#">联系方式</a></li>
@@ -39,7 +43,6 @@
     <div class="bgimg">
         <div class="bgcolor"></div>
     </div>
-    
     <div class="avatar clearfix">
         <img src="./resume/avatar.jpg" alt="人物头像">
         <div class="info clearfix">
@@ -77,5 +80,45 @@
                 <use xlink:href="#icon-twitter"></use>
             </svg></a>
     </div>
+    <div class="download-button">
+        <a href="">下载<span>PDF</span>简历</a>
+    </div>
+    <p>杜惠东，前端开发者</p>
+    <section class="skill">
+        <p>技能</p>
+        <div class="skill-list" >
+        <ul class="clearfix">
+            <li>HTML&CSS<div class="skill-bar"><span class="bar-cover" style="width:150px"></span></div></li>
+            <li>JavaScript<div class="skill-bar"><span class="bar-cover" style="width:250px"></span></div></li>
+            <li>JQuery<div class="skill-bar"><span class="bar-cover"style="width:350px"></span></div></li>
+            <li>Vue.js<div class="skill-bar"><span class="bar-cover"style="width:90px"></span></div></li>
+            <li>React.js<div class="skill-bar"><span class="bar-cover"style="width:120px"></span></div></li>
+            <li>Node.js<div class="skill-bar"><span class="bar-cover"style="width:180px"></span></div></li>
+        </ul> 
+        </div>
+        
+           
+    </section>
+    <br>
+    <section class="works"> 
+        <p>作品集</p>
+        
+        <div>
+            <p>
+                    <span id='all'>所有</span>
+                    <span id=model>框架</span>
+                    <span id=nativejs>原生JS</span>
+            </p>
+            <div class="works-bar"><span id= 'barcover' class="works-bar-cover"></span></div>
+        </div>
+       <div class="picture">
+           <img src="./resume/1.jpg" alt="">
+           <div>
+                <img class=img1 src="./resume/2.jpg" alt="">
+                <img src="./resume/3.jpg" alt="">
+            </div>
+       </div>  
+    </section>
+<script src="Nav.js"></script>
 </body>
 </html> 

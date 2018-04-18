@@ -2,11 +2,20 @@ body {
     background: #EFEFEF;
     margin: 0;
 }
-ul li {
+div.rscard ul li {
     list-style: none;
     float: left;  
     font-size: 12px;
     font-weight: bold;
+    position: relative;
+}
+div.rscard ul li .worklist {
+    position: absolute;
+    color: black;
+    background-color: whitesmoke;
+    transform: translateX(30px);
+    transition: all 0.3s;
+    display: none;   
 }
 
 .clearfix::after{
@@ -14,26 +23,38 @@ ul li {
     display: block;
     clear: both;
 }
-ul>li>a {
+div.rscard ul>li>a {
     text-decoration: none;
-    color: #B7B7B7;
+    color: inherit;
     border-bottom: 3px solid #E06567 transparent;
     border-top: 3px solid transparent;
     padding: 5px 0px;
     margin: 0px 17px;
     display: block;
 }
-ul>li>a:hover { 
+div.rscard ul>li>a:hover { 
     border-bottom: 3px solid #E06567;
 }
+
 
 div.rscard {
     position: fixed;
     width: 100%;
+    
 }
-
+div.rscard .addpadding.active {
+    background-color: #FFFFFF;
+    z-index: 1;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
+    padding: 10px 16px;
+    transition: all 0.5s;
+    color: black;
+}
+    
 div.addpadding {
-    padding: 20px 16px 20px 16px;
+    padding: 20px 16px;
+    transition: all 0.5s;
+    color: #B7B7B7;   
 }
 
 div>a {
@@ -54,7 +75,7 @@ a>span.card {
     color: #9A9DA2;
 }
 
-ul {
+div.rscard ul {
     margin: 0;
     padding: 0;
 }
@@ -77,10 +98,12 @@ div.bgcolor {
 } 
 
 div.avatar {
-    margin: auto auto;
+    margin: -350px auto 0;
     padding: 50px;
     max-width: 840px;
     background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.3);
+
 }
 
 div.avatar .hello {
@@ -128,10 +151,6 @@ dl *{
     margin:0;
     float: left;
 }
-
-dl {
-    margin: 0;
-}
 dl dt {
     width: 30%;
     font-weight: bold;
@@ -149,6 +168,7 @@ div.iconbar {
     margin: auto auto;
     padding: 0 50px 0 50px;
     text-align: center;
+    box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.5);
 }
 
 div.iconbar a {
@@ -169,4 +189,129 @@ svg.icon {
     width: 30px;
     height: 30px;
     vertical-align: top;
+}
+
+.download-button {
+    display: flex;
+    align-items: center; 
+}
+.download-button a {
+    text-decoration: none;
+    color: #3D4451;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 1px solid #CDCFD1;
+    padding: 20px 50px; 
+    margin: 30px auto;
+    
+}
+.download-button a:hover {
+    box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.3); 
+    transition: 0.5s;
+}
+body > p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.skill > p {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3D4451;
+}
+
+.skill .skill-list {
+    max-width: 840px;
+    margin:10px auto;
+    padding: 15px 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.3); 
+    position: relative;
+
+}
+.skill .skill-list ul {
+    padding: 0;
+  
+}
+.skill .skill-list li {
+    padding: 20px 15px;
+    list-style: none;
+    float: left;
+    width: 46%; 
+}
+.skill .skill-list .skill-bar {
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #FAE1E1;
+    margin: 3px 0;
+    
+}
+.skill .skill-list .bar-cover {
+    width: 200px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #E6686A;
+}
+
+section.works>p{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3D4451;
+    margin: 20px;
+}
+section.works div p{   
+    text-align: center;
+    font-size: 18px;
+    margin: 3px 20px; 
+ 
+}
+section.works div>p>span {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+section.works .works-bar {
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #FAE1E1;
+    margin: 5px auto;
+    width: 215px;
+}
+section.works .works-bar>.works-bar-cover {
+    width: 50px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #E6686A;
+    transition: all 0.5s;
+}
+section.works .works-bar>.works-bar-cover.active1{
+    width: 60px;
+    margin: 0 0 0 70px;
+}
+section.works .works-bar>.works-bar-cover.active2{
+    margin: 0 0 0 150px;
+    width: 65px;
+}
+section.works .picture {
+    display: flex;
+    max-width: 940px;
+    margin: 25px auto;
+}
+section.works .picture>img {
+    padding: 0 40px 0 0;
+}
+section.works .picture div>.img1 {
+    padding: 0 0 40px 0;
 }
