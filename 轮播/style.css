@@ -1,0 +1,18 @@
+div.cover > div > img {
+   
+}
+.images {
+    display: flex;
+    align-items: flex-start;
+    transition: all 1s; 
+    vertical-align: top;
+}
+.cover {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+.red {
+    color: red;
+    font-weight: bold;
+}
