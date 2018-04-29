@@ -1,0 +1,29 @@
+div.cover > div > img {
+    transition: 1s;
+    position: absolute;
+}
+.images {
+    display: flex;
+    align-items: flex-start;
+    vertical-align: top;
+    position: relative;
+}
+.cover {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.showing {
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.disappear {
+    transform: translateX(-100%); 
+}
+
+.waiting {
+    transform: translateX(100%);
+    
+}
