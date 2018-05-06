@@ -1,0 +1,52 @@
+body .container {
+    display: flex;
+    margin-left: -400px;
+    transition: all 1s; 
+}
+body > .viewer {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    margin: 50px auto 20px;
+    position: relative;
+}
+
+.span1 {
+    position: absolute;
+    top: 130px;
+    left: 5px;
+    font-size: 28px;
+    color: aliceblue;
+    padding: 0px 15px; 
+    background-color: rgba(173,230,247,0.3);
+    cursor: pointer;
+    display: none;
+}
+
+.span2 {
+    position: absolute;
+    top: 130px;
+    right: 5px;
+    font-size: 28px;
+    color: aliceblue;
+    padding: 0px 15px; 
+    background-color: rgba(173,230,247,0.3);
+    cursor: pointer;
+    display: none;
+}
+
+.active {
+    display: inline-block;
+}
+.buttons {
+    text-align: center;
+}
+.active1 {
+    transition: none;
+    margin-left: -1600px;
+}
+.active2 {
+    transition: none;
+    margin-left: -2000px;
+}
+
