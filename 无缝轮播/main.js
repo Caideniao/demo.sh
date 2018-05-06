@@ -1,7 +1,7 @@
 
 var images = $('img')
 var waitingList = [0, 1, 2]
-timer = setInterval(showImage, 3000)
+// timer = setInterval(showImage, 3000)
 function showImage() {
     var show1 = images.eq(waitingList[0])
     var show2 = images.eq(waitingList[1])
@@ -11,6 +11,45 @@ function showImage() {
     var s = waitingList.shift()
     waitingList.push(s)
 }
+var buttons = $('div.controller > button')
+var waiting = [2]
+
+buttons.bind('click', playSlide)
+function playSlide(e) {
+    var index = e.currentTarget.index()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // var buttons  = $('div.controller > button')
 // var flag = true  
 // var num = 0

@@ -100,7 +100,7 @@ div.bgcolor {
 div.avatar {
     margin: -350px auto 0;
     padding: 50px;
-    max-width: 840px;
+    width: 600px;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.3);
 
