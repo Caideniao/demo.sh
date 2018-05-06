@@ -3,13 +3,13 @@ var images = $('img')
 var waitingList = [0, 1, 2]
 // timer = setInterval(showImage, 3000)
 function showImage() {
-    var show1 = images.eq(waitingList[0])
-    var show2 = images.eq(waitingList[1])
+    var show1 = images.eq(waitingList[0]) //(n % 3)
+    var show2 = images.eq(waitingList[1]) //((n + 1) % 3)
     show2.one('transitionend', function(){show1.removeClass('disappear').addClass('waiting')})
     show1.removeClass('showing').addClass('disappear')
     show2.removeClass('waiting').addClass('showing')
     var s = waitingList.shift()
-    waitingList.push(s)
+    waitingList.push(s) //n++
 }
 var buttons = $('div.controller > button')
 var waiting = [2]
