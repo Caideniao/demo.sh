@@ -2,11 +2,10 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>topNavBar</title>
     <link rel="stylesheet" href="Navbar.css">
-    <script src=""></script>
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -15,7 +14,9 @@
            overflow: hidden;
         }
     </style>
-    <!-- <script src="//at.alicdn.com/t/font_600523_7mi7dp4r4i4zehfr.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//at.alicdn.com/t/font_600523_7mi7dp4r4i4zehfr.js"></script>
+    <script src="//cdn1.lncld.net/static/js/3.6.8/av-min.js"></script>
 </head>
 <body>
     <div id=rscard class="rscard">
@@ -27,8 +28,8 @@
             <nav>
                 <ul class="clearfix">
                     <li><a href="#">关于</a></li>
-                    <li><a href="#">技能</a></li>
-                    <li ><a id=worklist href="#">作品
+                    <li><a href="#skill-list">技能</a></li>
+                    <li ><a id=worklist href="#works-list">作品
                         <ul class="worklist">
                             <li>作品1</li>
                             <li>作品2</li>
@@ -85,7 +86,7 @@
         <a href="">下载<span>PDF</span>简历</a>
     </div>
     <p>杜惠东，前端开发者</p>
-    <section class="skill">
+    <section class="skill" id="skill-list">
         <p>技能</p>
         <div class="skill-list" >
         <ul class="clearfix">
@@ -101,7 +102,7 @@
            
     </section>
     <br>
-    <section class="works"> 
+    <section class="works" id="works-list"> 
         <p>作品集</p>
         
         <div>
@@ -119,6 +120,17 @@
                 <img src="./resume/3.jpg" alt="">
             </div>
        </div>  
+    </section>
+    <section class="comment">
+        <p>留言板</p>
+        <form class="comment-form">
+            <label for="comment-name"></label>
+            姓名: <input type="text" id=comment-name>
+            <label for="comment-content"></label>
+            内容: <input type="text" id="comment-content">
+            <input type="button" value="submit" class="input-button">
+        </form>
+        <div class="comment-content"></div>
     </section>
 <script src="Nav.js"></script>
 </body>

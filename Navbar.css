@@ -40,11 +40,11 @@ div.rscard ul>li>a:hover {
 div.rscard {
     position: fixed;
     width: 100%;
+    z-index: 10;
     
 }
 div.rscard .addpadding.active {
     background-color: #FFFFFF;
-    z-index: 1;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.3);
     padding: 10px 16px;
     transition: all 0.5s;
@@ -100,10 +100,9 @@ div.bgcolor {
 div.avatar {
     margin: -350px auto 0;
     padding: 50px;
-    width: 600px;
+    max-width: 840px;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 10px -1px rgba(0,0,0,0.3);
-
 }
 
 div.avatar .hello {
@@ -259,7 +258,7 @@ body > p {
     background-color: #E6686A;
 }
 
-section.works>p{
+section.works>p, section.comment > p{
     text-align: center;
     font-size: 32px;
     font-weight: bold;
@@ -314,4 +313,23 @@ section.works .picture>img {
 }
 section.works .picture div>.img1 {
     padding: 0 0 40px 0;
+}
+section.comment form {
+    text-align: center;
+}
+section.comment div.comment-content > div {
+    vertical-align: middle;
+    padding: 10px;
+    max-width: 640px;
+    margin: 0 auto;
+    border-bottom: 0.5px solid lightblue;
+}
+section.comment .delete {
+    background-color: lightcoral;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+section.comment div.comment-content{
+    padding-bottom: 150px;
 }
