@@ -5,25 +5,16 @@
     <meta name="viewport" content="width=device-width">   
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-     
- 
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    
-   <main>
-    
-              
-   </main>
-   
+<body> 
+    <main></main>
     <script>
-           
             var row = [["Q","W","E","R","T","Y","U","I","O","P"],["A","S","D","F","G","H","J","K","L"],["Z","X","C","V","B","N","M"]]
-            
             var hash = {"Q":"qq.com", E:"ele.me", M:"meituan.com"}
             var span = document.createElement('span')
-            cash = JSON.parse(localStorage.getItem('zz')) || 'null'
-            if(cash) {
+            cash = JSON.parse(localStorage.getItem('zz'))
+            if(cash !== 'null') {
                 hash = cash
             }  
             var length = row.length    
@@ -44,15 +35,7 @@
                     button.id = row[i][n]
                     keys.appendChild(text)
                     keyboard.appendChild(button)
-                    button.onclick = function (dd) {
-                    var button2 = dd['target']
-                    var key = button2['id']
-                    var x = prompt('请输入网址')
-                    hash[key] = x
-                    localStorage.setItem('zz',JSON.stringify(hash))}
-                    
-                    }
-                   
+                }                  
             }   
             document.onkeypress = function(x) {
             var key = x["key"].toUpperCase()
@@ -62,15 +45,9 @@
             }else {
                 var x = prompt('请输入网址')
                 hash[key] = x
-                localStorage.setItem('zz',JSON.stringify(hash))}         
+                localStorage.setItem('zz',JSON.stringify(hash))}    
             }
             </script>
-           <script>  
-                var x = document.createElement('div')
-                x.innerText = window.innerWidth
-                document.body.appendChild(x) </script>
-           
-
 </body>
 
 </html>
